@@ -9,63 +9,115 @@
 <body>
 
     <header class="header">
-        <div class="header_logo">
-            <img src="./src/img/logo.svg" alt="#">
-            <div class="header_block-name">
-                <p class="header_name">ЛЮДИ</p>
-                <p class="header_name-info">Театральная студия</p>
-            </div>
-        </div>
-
-        <div class="header_block">
-
-            <ul class="header_navbar">
-                <li>ГЛАВНАЯ</li>
-                <li>АФИША</li>
-                <li>ОБУЧЕНИЕ</li>
-                <li>РЕПЕРТУАР</li>
-            </ul>
-
-            <div class="header_info">
-                <img src="./src/img/INST.svg" alt="#">
-                <img src="./src/img/VK.svg" alt="#">
+        <div class="header_wrapper">
+            <div class="header_logo">
+                <img src="./src/img/logo.svg" alt="#">
+                <div class="header_block-name">
+                    <p class="header_name">ЛЮДИ</p>
+                    <p class="header_name-info">Театральная студия</p>
+                </div>
             </div>
 
+            <div class="header_block">
+
+                <ul class="header_navbar">
+                    <li>ГЛАВНАЯ</li>
+                    <li>АФИША</li>
+                    <li>ОБУЧЕНИЕ</li>
+                    <li>РЕПЕРТУАР</li>
+                </ul>
+
+                <div class="header_info">
+                    <img src="./src/img/INST.svg" alt="#">
+                    <img src="./src/img/VK.svg" alt="#">
+                </div>
+
+            </div>
         </div>
     </header>
 
     <div class="block-post">
-        <div class="post_background-black"></div>
-        <div class="post_image"></div>
-
-        <div class="post_text">
-            <p class="post_name">НИНА 1942</p>
-            <p class="post_info">СПЕКТАКЛЬ О ВОЙНЕ, 12+</p>
-        </div>
-
         <div class="post_slider">
             <div class="slider_wrapper">
+                <div class="slide carousel_item__active">
+                    <div class="post_background-black"></div>
+                    <img class="post_image" src="./src/img/spektakl.jpg">
+                    <div class="post_text">
+                        <p class="post_name">НИНА 1942</p>
+                        <p class="post_info">СПЕКТАКЛЬ О ВОЙНЕ, 12+</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="post_background-black"></div>
+                    <img class="post_image" src="./src/img/spektakl2.jpg">
+                    <div class="post_text">
+                        <p class="post_name">ЯМА</p>
+                        <p class="post_info">СПЕКТАКЛЬ О ЧЕМ-ТО, 12+</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="post_background-black"></div>
+                    <img class="post_image" src="./src/img/spektakl3.jpg">
+                    <div class="post_text">
+                        <p class="post_name">ПЛЕМЯ</p>
+                        <p class="post_info">СПЕКТАКЛЬ О ЧЕМ-ТО, 13+</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="post_background-black"></div>
+                    <img class="post_image" src="./src/img/spektakl4.jpg">
+                    <div class="post_text">
+                        <p class="post_name">ВСЕМ, КОГО КАСАЕТСЯ</p>
+                        <p class="post_info">СПЕКТАКЛЬ О ЧЕМ-ТО, 14+</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="post_background-black"></div>
+                    <img class="post_image" src="./src/img/spektakl5.jpg">
+                    <div class="post_text">
+                        <p class="post_name">ЧУЧЕЛО</p>
+                        <p class="post_info">СПЕКТАКЛЬ О ЧЕМ-ТО, 15+</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="post_background-black"></div>
+                    <img class="post_image" src="./src/img/spektakl6.jpg">
+                    <div class="post_text">
+                        <p class="post_name">СВОЛОЧИ</p>
+                        <p class="post_info">СПЕКТАКЛЬ О ЧЕМ-ТО, 16+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <div class="dots" onclick="slider_click(this)">
                 <div class="slider_wrapper-color"></div>
             </div>
 
-            <div class="slider_wrapper">
-                <!-- <div class="slider_wrapper-color"></div> -->
+            <div class="dots" onclick="slider_click(this)">
+                <div class="slider_wrapper-color"></div>
             </div>
 
-            <div class="slider_wrapper">
-                <!-- <div class="slider_wrapper-color"></div> -->
+            <div class="dots" onclick="slider_click(this)">
+                <div class="slider_wrapper-color"></div>
             </div>
 
-            <div class="slider_wrapper">
-                <!-- <div class="slider_wrapper-color"></div> -->
+            <div class="dots" onclick="slider_click(this)">
+                <div class="slider_wrapper-color"></div>
             </div>
 
-            <div class="slider_wrapper">
-                <!-- <div class="slider_wrapper-color"></div> -->
+            <div class="dots" onclick="slider_click(this)">
+                <div class="slider_wrapper-color"></div>
             </div>
 
-            <div class="slider_wrapper">
-                <!-- <div class="slider_wrapper-color"></div> -->
+            <div class="dots" onclick="slider_click(this)">
+                <div class="slider_wrapper-color"></div>
             </div>
         </div>
     </div>
@@ -145,5 +197,6 @@
         </div>
     </div>
     
+    <script src="./scripts/main/index.js"></script>
 </body>
 </html>

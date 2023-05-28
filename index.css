@@ -20,21 +20,25 @@ p{
 
 .header{
     z-index: 2;
+    width: 100%;
     top: 0;
     left: 0;
     position: absolute;
+}
+
+.header_wrapper{
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 150px 0 150px;
     height: 126px;
-    width: 100%;
-    filter: drop-shadow(0px 4px 25px rgba(0, 0, 0, 0.25));
 }
 
 .header_logo{
     cursor: pointer;
-    margin-left: 150px;
-    width: 72px;
+    width: 250px;
     height: 72px;
     display: flex;
 }
@@ -71,7 +75,6 @@ p{
 
 .header_block{
     display: flex;
-    margin-right: 150px;
 }
 
 .header_navbar{
@@ -110,26 +113,69 @@ li + li{
     height: 36px;
 }
 
+
+/* СЛАЙДЕР С АФИШЕЙ */
+
 .block-post{
     position: relative;
 }
 
+.post_slider{
+    overflow: hidden;
+    display: block;
+    height: 100%;
+}
+
+.slider_wrapper{
+    height: 100%;
+}
+
+.slider_wrapper::after{
+    content: "";
+    display: block;
+    clear: both;
+ }
+
+.slide{
+    display: none;
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-right: -100%;
+    position: relative;
+}
+
+.carousel_item__active,
+.carousel_item__pos_next{
+   display: block;
+}
+
+.carousel_item__pos_next{
+    left: 100%;
+ }
+ 
+ .carousel_item__next{
+    transform: translateX(-100%);
+    transition: transform 1s ease-in-out;
+ }
+
 .post_background-black{
-    z-index: 0;
     background: rgba(0, 0, 0, 0.25);
+    z-index: 1;
     position: absolute;
     width: 100%;
-    height: 1000px;
+    height: 100%;
 }
 
 .post_image{
-    z-index: -1;
-    background: url(./src/img/spektakl.jpg) no-repeat top center;
-    background-size: cover;
-    height: 1000px;
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .post_text{
+    z-index: 2;
     position: absolute;
     bottom: 200px;
     left: 285px;
@@ -156,8 +202,7 @@ li + li{
     margin-top: 39px;
 }
 
-
-.post_slider{
+.slider-dots{
     display: flex;
     justify-content: center;
     z-index: 2;
@@ -166,11 +211,15 @@ li + li{
     bottom: 41px;
 }
 
-.post_slider :not(:first-child){
+.slider_dots-dis{
+    pointer-events: none;
+}
+
+.slider-dots :not(:first-child){
     margin-left: 40px;
 }
 
-.slider_wrapper{
+.dots{
     background-color: #ffffff;
     height: 8px;
     width: 145px;
@@ -181,8 +230,17 @@ li + li{
     border-radius: 5px;
     background-color: #7EB12A;
     height: 8px;
-    width: 50%;
+    width: 0%;
 }
+
+.dots_active{
+    transform: scaleX(100%);
+    transition: transform .5s ease-in-out;
+}
+
+/* КОНЕЦ СЛАЙДЕРА */
+/*                */
+/* О ТЕАТРЕ       */
 
 .block-info{
     background-color: #262625;
@@ -408,4 +466,3 @@ li + li{
     width: 36px;
     height: 36px;
 }
-
