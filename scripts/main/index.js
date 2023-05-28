@@ -1,5 +1,7 @@
 window.addEventListener("load", () => {
     autoSlide();
+    const sliderDots = Array.from(document.querySelectorAll(".slider_color"));
+    sliderDots[0].className = "slider_color slider_color-active";
 })
 
 function autoSlide() {
@@ -8,20 +10,23 @@ function autoSlide() {
         window.slideInterval = setInterval(() => {
             slide(getItemActiveIndex()+1)
         }, 8000);
-    } // slide speed = 3s
+    } // slide speed = 8s
 }
 
 function slide(n){
     const sliderHTML = Array.from(document.querySelectorAll(".slide"));
     const sliderActive = document.querySelector(".carousel_item__active");
-    const sliderDots = Array.from(document.querySelectorAll(".dots"));
+    const sliderDots = Array.from(document.querySelectorAll(".slider_color"));
+    const dotsActive = document.querySelector(".slider_color-active");
 
     if (n >= sliderHTML.length) {
         n = 0;
     }
+
     const newDotsActive = sliderDots[n];
     const newItemActive = sliderHTML[n];
 
+    
     newItemActive.classList.add("carousel_item__pos_next");
     setTimeout(() => {
         newItemActive.classList.add("carousel_item__next");
@@ -29,6 +34,8 @@ function slide(n){
     }, 20);
 
     newItemActive.addEventListener("transitionend", () => {
+        dotsActive.className = "slider_color";
+        newDotsActive.className = "slider_color slider_color-active";
         sliderActive.className = "slide";
         newItemActive.className = "slide carousel_item__active";
     }, {

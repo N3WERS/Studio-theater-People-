@@ -137,6 +137,7 @@ li + li{
  }
 
 .slide{
+    cursor: pointer;
     display: none;
     width: 100%;
     height: auto;
@@ -220,22 +221,26 @@ li + li{
 }
 
 .dots{
+    cursor: pointer;
     background-color: #ffffff;
     height: 8px;
     width: 145px;
     border-radius: 5px;
+    overflow: hidden;
 }
 
-.slider_wrapper-color{
+.slider_color{
+    float: left;
     border-radius: 5px;
     background-color: #7EB12A;
     height: 8px;
-    width: 0%;
+    width: 100%;
+    margin-left: -100%;
 }
 
-.dots_active{
-    transform: scaleX(100%);
-    transition: transform .5s ease-in-out;
+.slider_color-active{
+    transition: transform 8s;
+    transform: translateX(100%);
 }
 
 /* КОНЕЦ СЛАЙДЕРА */
