@@ -17,26 +17,33 @@ getNewsFromStrapi().then(function(value) {
                 НОВОСТИ
             </div>
             <div class="main_block-news">
+
             </div>
         `;
 
     parentDiv.insertBefore(div, parentDiv.lastChild);
 
-    for (let i = 0; i < value.data.reverse().length; i++) {
+    for (let i = 0; i < value.data.length; i++) {
         let parentDiv = document.querySelector("div.main_block-news");
         let div = document.createElement("div");
-        div.className = "news_card";
+        div.className = "news-card-wrapper";
         div.innerHTML =
             `
-                <img class="news-card_image" src="" alt="#" id="Img">
-                    <div class="news-card_text">
-                        <span class="name-news" id="Header"></span>
-                        <span class="more-news">Читать подробнее...</span>
+                <div class="news-card" onclick="openNews(this)">
+                    <img id="Img" class="image-news" src="">
+                    <div class="block-text-news">
+                        <span class="news-header" id="Header"></span>
+                        <span class="news-more">Читать подробнее...</span>
+                    </div>
+                </div>
+                <div class="about-wrapper">
+                    <span class="about-news" id="ab-news"></span>
                 </div>
             `;
         parentDiv.insertBefore(div, parentDiv.firstChild);
 
         document.getElementById('Img').src = strapiUrl + value.data[i].attributes.image.data[0].attributes.url;
         document.getElementById('Header').textContent = value.data[i].attributes.header;
+        document.getElementById("ab-news").textContent = value.data[i].attributes.text;
     } 
 });
