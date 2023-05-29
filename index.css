@@ -18,6 +18,10 @@ p{
     margin: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
 .header{
     z-index: 2;
     width: 100%;

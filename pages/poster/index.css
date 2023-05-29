@@ -1,0 +1,356 @@
+@font-face {
+    font-family: "Inter";
+    src: url(../../src/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: "Zen Kaku Gothic New";
+    src: url(../../src/fonts/ZenKakuGothicNew-Regular.ttf);
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+}
+
+.header{
+    background-color: #262625;
+    filter: drop-shadow(0px 4px 25px rgba(0, 0, 0, 0.25));
+    z-index: 2;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.header_wrapper{
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 150px 0 150px;
+    height: 126px;
+}
+
+.header_logo{
+    cursor: pointer;
+    width: 250px;
+    height: 72px;
+    display: flex;
+}
+
+.header_block-name{
+    cursor: pointer;
+    color: #FDF4E3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.header_name{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 14px;
+    text-transform: uppercase;
+}
+
+.header_name-info{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    width: 220px;
+    margin-top: 5px;
+}
+
+.header_block{
+    display: flex;
+}
+
+.header_navbar{
+    display: flex;
+    color: #FDF4E3;
+}
+
+li{
+    cursor: pointer;
+    display: flex;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+li + li{
+    margin-left: 50px;
+}
+
+.header_info{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 122px;
+    justify-content: space-between;
+    margin-left: 75px; 
+}
+
+
+.header_info img{
+    width: 36px;
+    height: 36px;
+}
+
+
+/*  */
+/*  */
+
+.poster-content{
+    background-color: #262625;
+    width: 100%;
+    height: auto;
+    padding: 50px 0 88px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.month{
+    padding-top: 50px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-poster{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #7EB12A;
+    max-width: 1296px;
+    width: 100%;
+    height: 60px;
+}
+
+.header-poster-text{
+    margin-left: 17px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
+    color: #FDF4E3;
+}
+
+.poster-block{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.poster-cell{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1296px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.poster-date-name{
+    display: flex;
+}
+
+.poster-date{
+    margin: 35px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.poster-date span{  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    color: #FDF4E3;
+}
+
+.poster-name{
+    display: flex;
+    flex-direction: column;
+    margin: 35px 0 0 75px;
+    justify-content: flex-start;
+}
+
+.name{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    color: #FDF4E3;
+}
+
+.poster-about{
+    max-width: 636px;
+    width: 100%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    color: #FDF4E3;
+}
+
+.poster-age-booking{
+    display: flex;
+    margin-right: 45px;
+}
+
+.poster-age{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;    
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poster-booking{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    display: flex;
+    align-items: center; 
+    color: #7EB12A;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 45px;
+}
+
+/*  */
+/*  */
+
+
+.footer{
+    padding: 0 150px 0 150px; 
+    height: 130px;
+    filter: drop-shadow(0px -4px 25px rgba(0, 0, 0, 0.25));
+    background-color: #262625;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_adr-phone-block{
+    display: flex;
+}
+
+.footer_adress{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.footer_adress :not(:first-child){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 10px; /* !!! из-за этого текст лезет друг на друга */
+    text-transform: uppercase;
+    color: #FDF4E3;
+} 
+
+
+.footer_adress-text{
+    margin-bottom: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #FDF4E3;
+}
+
+
+.footer_phone :not(:first-child){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #FDF4E3;
+} 
+
+
+.footer_phone{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 36px;
+}
+
+.footer_ph{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FDF4E3;
+}
+
+.footer_block{
+    display: flex;
+}
+
+.footer_navbar{
+    display: flex;
+    color: #FDF4E3;
+}
+
+.footer_info{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 122px;
+    justify-content: space-between;
+    margin-left: 75px; 
+}
+
+.footer_info img{
+    width: 36px;
+    height: 36px;
+}
