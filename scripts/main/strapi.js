@@ -1,5 +1,41 @@
 const strapiUrl = "http://localhost:1337"
 
+const getInfoFromStrapi = async () => {
+    const response = await fetch(strapiUrl + "/api/o-teatre/?populate=*");
+    return response.json();
+}
+
+getInfoFromStrapi().then(function(value) {
+    let parentDiv = document.querySelector("div.block-info");
+    let div = document.createElement("div");
+    div.className = "block_info-about-studio";
+    div.innerHTML =
+        `
+            <div class="heading_info-about">
+            </div>
+
+            <div class="main-block_info-about">
+                <div class="info-about_image">
+                    <img src="./src/img/about1.jpg" alt="#">
+                    <img src="./src/img/about2.jpg" alt="#">
+                </div>
+
+                <div class="info-about_text">
+                </div>
+            </div>
+        `;
+
+    parentDiv.insertBefore(div, parentDiv.lastChild);
+    document.querySelector("div.heading_info-about").textContent = value.data.attributes.header;
+    document.querySelector("div.info-about_text").textContent = value.data.attributes.text;
+
+    for (let i = 0; i < value.data.attributes.images.data.length; i++) {
+        let parentDiv = document.querySelector("info-about_image");
+        let img = document.createElement("img");
+        img.src = strapiUrl + value.data.attributes.images.data[i].attributes.url
+    }
+});
+
 const getNewsFromStrapi = async () => {
     const response = await fetch(strapiUrl + "/api/news/?populate=*");
     return response.json();
@@ -22,7 +58,7 @@ getNewsFromStrapi().then(function(value) {
 
     parentDiv.insertBefore(div, parentDiv.lastChild);
 
-    for (let i = 0; i < value.data.reverse().length; i++) {
+    for (let i = 0; i < value.data.length; i++) {
         let parentDiv = document.querySelector("div.main_block-news");
         let div = document.createElement("div");
         div.className = "news_card";
@@ -37,6 +73,6 @@ getNewsFromStrapi().then(function(value) {
         parentDiv.insertBefore(div, parentDiv.firstChild);
 
         document.getElementById('Img').src = strapiUrl + value.data[i].attributes.image.data[0].attributes.url;
-        document.getElementById('Header').textContent = value.data[i].attributes.header;
+        document.getElementById('Header').textContent = value.data[i].attributes.header; 
     } 
 });

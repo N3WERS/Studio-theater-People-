@@ -301,6 +301,7 @@ li + li{
     font-weight: 200;
     font-size: 24px;
     color: #FDF4E3;
+    white-space: pre-line;
 }
 
 .block_news{
