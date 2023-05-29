@@ -1,15 +1,42 @@
+const strapiUrl = "http://localhost:1337"
+
 const getNewsFromStrapi = async () => {
-    const response = await fetch('http://localhost:1337/api/news/?populate=*');
+    const response = await fetch(strapiUrl + "/api/news/?populate=*");
     return response.json();
 }
 
-const myJson = getNewsFromStrapi();
+getNewsFromStrapi().then(function(value) {
+    if (value.data.length == 0) return 1;
 
-myJson.then(function(value) {
-    for (let i = 0; i < value.data.length; i++) {
-        console.log(value.data[i]);
+    let parentDiv = document.querySelector("div.block-info");
+    let div = document.createElement("div");
+    div.className = "block_news";
+    div.innerHTML =
+        `
+            <div class="heading_news">
+                НОВОСТИ
+            </div>
+            <div class="main_block-news">
+            </div>
+        `;
 
-        document.getElementById('img-from-js').src = "http://localhost:1337" + value.data[i].attributes.Image.data[0].attributes.formats.large.url;
-        document.getElementById('txt-from-js').textContent = value.data[i].attributes.Header;
+    parentDiv.insertBefore(div, parentDiv.lastChild);
+
+    for (let i = 0; i < value.data.reverse().length; i++) {
+        let parentDiv = document.querySelector("div.main_block-news");
+        let div = document.createElement("div");
+        div.className = "news_card";
+        div.innerHTML =
+            `
+                <img class="news-card_image" src="" alt="#" id="Img">
+                    <div class="news-card_text">
+                        <span class="name-news" id="Header"></span>
+                        <span class="more-news">Читать подробнее...</span>
+                </div>
+            `;
+        parentDiv.insertBefore(div, parentDiv.firstChild);
+
+        document.getElementById('Img').src = strapiUrl + value.data[i].attributes.Image.data[0].attributes.formats.large.url;
+        document.getElementById('Header').textContent = value.data[i].attributes.Header;
     } 
 });

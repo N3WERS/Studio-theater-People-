@@ -327,11 +327,12 @@ li + li{
 .main_block-news{
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.news_img{
+.news_card{
     margin-top: 30px;
     position: relative;
     max-width: 1289px;
@@ -341,6 +342,8 @@ li + li{
 
 .news-card_image{
     max-width: 1289px;
+    max-height: 600px;
+    object-fit: cover;
     width: 100%;
     border-radius: 40px;
 }
