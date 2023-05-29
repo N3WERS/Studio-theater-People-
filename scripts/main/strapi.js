@@ -36,7 +36,7 @@ getNewsFromStrapi().then(function(value) {
             `;
         parentDiv.insertBefore(div, parentDiv.firstChild);
 
-        document.getElementById('Img').src = strapiUrl + value.data[i].attributes.Image.data[0].attributes.formats.large.url;
-        document.getElementById('Header').textContent = value.data[i].attributes.Header;
+        document.getElementById('Img').src = strapiUrl + value.data[i].attributes.image.data[0].attributes.url;
+        document.getElementById('Header').textContent = value.data[i].attributes.header;
     } 
 });
