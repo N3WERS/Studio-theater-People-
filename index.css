@@ -97,6 +97,11 @@ li + li{
     margin-left: 50px;
 }
 
+a {
+    text-decoration: none;
+    color: #FDF4E3;
+}
+
 .header_info{
     cursor: pointer;
     display: flex;
@@ -187,7 +192,7 @@ li + li{
     font-weight: 600;
     font-size: 48px;
     line-height: 18px;
-    color: #ffffff;
+    color: #FDF4E3;
     letter-spacing: 0.05em;
 
 }
@@ -198,7 +203,7 @@ li + li{
     font-weight: 200;
     font-size: 32px;
     line-height: 14px;
-    color: #FFFFFF;
+    color: #FDF4E3;
     margin-top: 39px;
 }
 
@@ -221,7 +226,7 @@ li + li{
 
 .dots{
     cursor: pointer;
-    background-color: #ffffff;
+    background-color: #FDF4E3;
     height: 8px;
     width: 145px;
     border-radius: 5px;
@@ -400,13 +405,13 @@ li + li{
 }
 
 .about-wrapper-active{
-    max-height: 1000px;
+    max-height: 3000px;
     transition: max-height 2s;
 }
 
 .about-wrapper-disactive{
     max-height: 0px;
-    transition: max-height 1s;
+    transition: max-height 2s;
 }
 
 .about-news{
