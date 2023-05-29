@@ -67,7 +67,7 @@ p{
     font-style: normal;
     font-weight: 200;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 20px;
     text-transform: uppercase;
     width: 220px;
     margin-top: 5px;
@@ -89,7 +89,6 @@ li{
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
-    line-height: 13px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
@@ -250,6 +249,7 @@ li + li{
 .block-info{
     background-color: #262625;
     padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 
@@ -261,13 +261,11 @@ li + li{
     background-color: #7EB12A;
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 100%;
+    font-weight: 500;
+    font-size: 32px;
     display: flex;
     align-items: center;
     color: #FDF4E3;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -302,7 +300,6 @@ li + li{
     font-style: normal;
     font-weight: 200;
     font-size: 24px;
-    line-height: 30px;
     color: #FDF4E3;
 }
 
@@ -319,13 +316,12 @@ li + li{
     background-color: #7EB12A;
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
+    font-weight: 500;
+    font-size: 32px;
     line-height: 100%;
     display: flex;
     align-items: center;
     color: #FDF4E3;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 .main_block-news{
@@ -358,9 +354,9 @@ li + li{
 .name-news{
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 36px;
-    line-height: 100%;
+    line-height: 75%;
     display: flex;
     align-items: center;
     color: #FDF4E3;
@@ -372,14 +368,13 @@ li + li{
     font-style: normal;
     font-weight: 200;
     font-size: 20px;
-    line-height: 70%;
+    line-height: 75%;
     display: flex;
     align-items: center;
     color: #FDF4E3;
 }
 
 .footer{
-    margin-top: 100px;
     padding: 0 150px 0 150px; 
     height: 130px;
     filter: drop-shadow(0px -4px 25px rgba(0, 0, 0, 0.25));
@@ -405,7 +400,7 @@ li + li{
     font-style: normal;
     font-weight: 200;
     font-size: 16px;
-    line-height: 10px;
+    line-height: 10px; /* !!! из-за этого текст лезет друг на друга */
     text-transform: uppercase;
     color: #FDF4E3;
 } 
@@ -444,7 +439,6 @@ li + li{
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
-    line-height: 13px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #FDF4E3;
