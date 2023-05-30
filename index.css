@@ -362,6 +362,7 @@ a {
     justify-content: center;
     align-items: center;
     position: relative;
+    cursor: pointer;
 }
 
 .image-news{
@@ -410,12 +411,12 @@ a {
 
 .about-wrapper-active{
     max-height: 3000px;
-    transition: max-height 2s;
+    transition: max-height 3s;
 }
 
 .about-wrapper-disactive{
     max-height: 0px;
-    transition: max-height 2s;
+    transition: max-height 1s;
 }
 
 .about-news{

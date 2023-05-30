@@ -18,6 +18,13 @@ p{
     margin: 0;
 }
 
+
+a {
+    text-decoration: none;
+    color: #FDF4E3;
+    transition: color .6s;
+}
+
 .header{
     background-color: #262625;
     filter: drop-shadow(0px 4px 25px rgba(0, 0, 0, 0.25));
@@ -45,8 +52,8 @@ p{
 }
 
 .header_block-name{
-    cursor: pointer;
     color: #FDF4E3;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -55,6 +62,8 @@ p{
 }
 
 .header_name{
+    color: #FDF4E3;
+    transition: .6s;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -94,6 +103,11 @@ li{
     text-transform: uppercase;
 }
 
+a:hover{
+    transition: color .6s;
+    color: #7EB12A;
+}
+
 li + li{
     margin-left: 50px;
 }
@@ -111,6 +125,13 @@ li + li{
 .header_info img{
     width: 36px;
     height: 36px;
+    transform: scale(100%);
+    transition: transform .6s;
+}
+
+.header_info img:hover{
+    transform: scale(140%);
+    transition: transform .6s;
 }
 
 
@@ -120,11 +141,12 @@ li + li{
 .poster-content{
     background-color: #262625;
     width: 100%;
-    height: auto;
+    min-height: 100%;
     padding: 50px 0 88px 0;
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-size: cover;
 }
 
 .month{
@@ -166,6 +188,13 @@ li + li{
     align-items: center;
 }
 
+.poster-cell:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 200px;
+    transition: height .6s, background-color .6s;
+}
+
+
 .poster-cell{
     display: flex;
     justify-content: space-between;
@@ -173,6 +202,7 @@ li + li{
     margin-bottom: 10px;
     width: 100%;
     height: 150px;
+    transition: height .6s;
     background: rgba(0, 0, 0, 0.15);
 }
 
@@ -181,10 +211,11 @@ li + li{
 }
 
 .poster-date{
-    margin: 35px 0 0 20px;
+    margin: 0 0 0 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
 .poster-date span{  
@@ -196,10 +227,10 @@ li + li{
 }
 
 .poster-name{
+    margin: 0 0 0 75px;
     display: flex;
     flex-direction: column;
-    margin: 35px 0 0 75px;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .name{
@@ -227,6 +258,7 @@ li + li{
 .poster-age-booking{
     display: flex;
     margin-right: 45px;
+    cursor: pointer;
 }
 
 .poster-age{
