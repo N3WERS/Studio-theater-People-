@@ -168,6 +168,7 @@ a:hover{
     font-weight: 500;
     font-size: 24px;
     color: #FDF4E3;
+    transition: .6s;
     max-width: 200px;
     height: 100%;
     margin-top: 15px;
